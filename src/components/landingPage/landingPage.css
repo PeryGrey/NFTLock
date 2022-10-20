@@ -1,0 +1,56 @@
+.landing-header {
+  /* padding-top: 10rem !important;
+  padding-bottom: 10rem !important; */
+  height: 90vh;
+  max-width: 110rem !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  align-items: left;
+  justify-content: center;
+}
+
+.landing--protect:link,
+.landing--protect:visited {
+  text-decoration: none;
+
+  display: inline-block;
+
+  color: var(--color-neon);
+  font-weight: 600;
+
+  border: 0.1rem var(--color-neon) solid;
+  border-radius: var(--border-radius);
+  background-color: var(--color-neon-trans-light);
+
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+
+  transition: all 0.3s;
+}
+
+.landing--protect:hover,
+.landing--protect:active {
+  background-color: var(--color-neon-trans);
+}
+
+.steps-heading {
+  padding-bottom: 3rem;
+}
+
+.landing-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  column-gap: 2.5rem;
+}
+
+.landing-steps-grid > div > h4 {
+  padding-bottom: 2rem;
+}
+
+/* .landing-steps-grid > div > p {
+  font-size: 2rem;
+} */

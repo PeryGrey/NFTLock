@@ -1,0 +1,83 @@
+:root {
+  /* --background: #081c24; */
+  --background: #171818;
+  --text-white: #f1f1f1;
+
+  --color-neon: #e7f9a9;
+  --color-neon-trans: #e8f9a918;
+  --color-neon-trans-light: #e8f9a910;
+
+  --color-grey: #929292;
+  --color-grey-trans: #92929221;
+
+  --color-red: #fe4a49;
+  --color-green: #4ea699;
+  /* --color-blue: #8af3ff; */
+  /* --color-blue: #0091ad; */
+
+  --border-radius: 0.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden !important;
+  background-color: var(--background);
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 3rem;
+  color: var(--text-white);
+  word-spacing: -0.5rem;
+
+  -webkit-animation: fadeInAnimation ease 1.8s;
+  -moz-animation: fadeInAnimation ease 1.8s;
+  -ms-animation: fadeInAnimation ease 1.8s;
+  -o-animation: fadeInAnimation ease 1.8s;
+  animation: fadeInAnimation ease 1.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+  max-width: 120rem;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.topic-header {
+  font-size: 6rem;
+  line-height: 1;
+
+  color: var(--dark-green);
+
+  padding-bottom: 2.5rem;
+}
+
+.topic-text {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.emphasise {
+  color: var(--color-neon);
+}

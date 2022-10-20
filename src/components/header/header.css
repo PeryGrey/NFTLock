@@ -1,0 +1,137 @@
+.nav-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+
+  /* display: block; */
+  /* background-color: var(--background-grey) !important; */
+
+  /* box-shadow: 0 0.1rem 2rem #051117; */
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 9rem;
+  position: relative;
+}
+
+.nav-name-div {
+  position: relative;
+}
+
+.nav-name:link,
+.nav-name:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-neon);
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: -0.1rem;
+
+  /* color: var(--dark-green); */
+
+  transition: all 0.3s;
+}
+
+.nav-name:active,
+.nav-name:hover {
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.name-hover {
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+
+  position: absolute;
+  top: -2.05rem;
+  left: -2.75rem;
+
+  z-index: 2;
+
+  width: 20rem;
+  height: auto;
+
+  opacity: 0;
+}
+
+.name-hover:hover {
+  opacity: 1;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-weight: 400;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+
+  padding: 1.1rem 2.2rem 1rem;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+}
+
+.metamask-box {
+  cursor: pointer;
+
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--color-grey-trans);
+
+  padding: 0.5rem 0.8rem;
+
+  border: 0.1rem var(--color-grey) solid;
+  border-radius: var(--border-radius);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metamask-color {
+  fill: var(--color-grey);
+}
+
+.metamask-icon {
+  height: 2rem;
+  width: auto;
+}
+
+.nav--protect:link,
+.nav--protect:visited {
+  text-decoration: none;
+
+  display: inline-block;
+
+  color: var(--color-neon);
+  font-weight: 600;
+
+  border: 0.1rem var(--color-neon) solid;
+  border-radius: var(--border-radius);
+  background-color: var(--color-neon-trans-light);
+
+  padding: 1rem 1.5rem;
+
+  transition: all 0.3s;
+}
+
+.nav--protect:hover,
+.nav--protect:active {
+  background-color: var(--color-neon-trans);
+}
