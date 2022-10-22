@@ -104,8 +104,14 @@
   align-items: center;
 }
 
-.metamask-color {
-  fill: var(--color-grey);
+.metamask-box-neon {
+  background-color: var(--color-neon-trans-light);
+
+  border: 0.1rem var(--color-neon) solid;
+}
+
+.metamask-icon-neon {
+  fill: var(--color-neon);
 }
 
 .metamask-icon {

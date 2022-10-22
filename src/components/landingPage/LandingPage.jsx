@@ -15,7 +15,7 @@ export default function LandingPage() {
 
         <p className="topic-text">Bye bye scammers 👋</p>
 
-        <Link to="/calorie-counter" className="landing--protect">
+        <Link to="/lock-NFT" className="landing--protect">
           Protect your NFTs!
         </Link>
       </div>

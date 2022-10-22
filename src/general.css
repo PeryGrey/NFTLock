@@ -4,11 +4,14 @@
   --text-white: #f1f1f1;
 
   --color-neon: #e7f9a9;
-  --color-neon-trans: #e8f9a918;
+  --color-neon-trans: #e8f9a921;
   --color-neon-trans-light: #e8f9a910;
 
   --color-grey: #929292;
   --color-grey-trans: #92929221;
+
+  --color-card-grey: #343434;
+  --color-card-grey-light: #494949;
 
   --color-red: #fe4a49;
   --color-green: #4ea699;
@@ -34,7 +37,8 @@ html {
 body {
   margin: 0 !important;
 
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Inter', sans-serif;
+
   line-height: 1;
   font-weight: 300;
   font-size: 3rem;
@@ -48,6 +52,20 @@ body {
   animation: fadeInAnimation ease 1.8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+p {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+a,
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Sans Mono', monospace;
+  word-spacing: -0.5rem;
 }
 
 /**************************/
