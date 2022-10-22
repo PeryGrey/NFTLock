@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 0.5rem none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-card-grey);
+
+  transition: all 0.3s;
+}
+
+.card:hover {
+  background-color: var(--color-card-grey-light);
+}
+
+.image {
+  width: 18rem;
+  height: auto;
+}
+
+.NFT-deets {
+  align-self: start;
+  padding: 2rem 1rem 1.5rem;
+
+  width: 100%;
+}
+
+.NFT-name {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-bottom: 0.8rem;
+}
+
+.NFT-collection {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.NFT-lock-btn {
+  width: 100%;
+
+  cursor: pointer;
+
+  color: var(--color-card-grey);
+  background-color: var(--color-neon);
+
+  padding: 0.6rem;
+
+  border: 0.1rem var(--color-neon) solid;
+  border-bottom-left-radius: var(--border-radius) var(--border-radius);
+  border-bottom-right-radius: var(--border-radius) var(--border-radius);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
