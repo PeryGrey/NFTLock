@@ -5,5 +5,8 @@
 .NFT-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 20rem; */
   gap: 3rem 3rem;
+
+  padding-bottom: 4rem;
 }

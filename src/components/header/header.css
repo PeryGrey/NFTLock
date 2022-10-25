@@ -5,7 +5,7 @@
   overflow: hidden;
 
   /* display: block; */
-  /* background-color: var(--background-grey) !important; */
+  background-color: var(--background) !important;
 
   /* box-shadow: 0 0.1rem 2rem #051117; */
   z-index: 5;
@@ -16,11 +16,7 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 9rem;
-  position: relative;
-}
-
-.nav-name-div {
+  height: 8vh;
   position: relative;
 }
 
@@ -28,8 +24,8 @@
 .nav-name:visited {
   display: inline-block;
   text-decoration: none;
-  color: var(--color-neon);
-  font-weight: 400;
+  color: var(--primary);
+  font-weight: 900;
   font-size: 2.5rem;
   letter-spacing: -0.1rem;
 
@@ -96,7 +92,8 @@
 
   padding: 0.5rem 0.8rem;
 
-  border: 0.1rem var(--color-grey) solid;
+  border: 0.1rem var(--secondary) solid;
+  background-color: var(--secondary-trans);
   border-radius: var(--border-radius);
 
   display: flex;
@@ -104,40 +101,16 @@
   align-items: center;
 }
 
-.metamask-box-neon {
-  background-color: var(--color-neon-trans-light);
-
-  border: 0.1rem var(--color-neon) solid;
+.metamask-box-green {
+  border: 0.1rem var(--btn-color) solid;
+  background-color: var(--btn-color);
 }
 
-.metamask-icon-neon {
-  fill: var(--color-neon);
+.metamask-icon-green {
+  fill: var(--text-white);
 }
 
 .metamask-icon {
   height: 2rem;
   width: auto;
-}
-
-.nav--protect:link,
-.nav--protect:visited {
-  text-decoration: none;
-
-  display: inline-block;
-
-  color: var(--color-neon);
-  font-weight: 600;
-
-  border: 0.1rem var(--color-neon) solid;
-  border-radius: var(--border-radius);
-  background-color: var(--color-neon-trans-light);
-
-  padding: 1rem 1.5rem;
-
-  transition: all 0.3s;
-}
-
-.nav--protect:hover,
-.nav--protect:active {
-  background-color: var(--color-neon-trans);
 }

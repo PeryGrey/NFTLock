@@ -1,8 +1,6 @@
 .landing-header {
-  /* padding-top: 10rem !important;
-  padding-bottom: 10rem !important; */
-  height: 90vh;
-  max-width: 110rem !important;
+  height: 92vh;
+  max-width: 120rem !important;
 
   display: flex;
   flex-direction: column;
@@ -14,31 +12,19 @@
 
 .landing--protect:link,
 .landing--protect:visited {
-  text-decoration: none;
-
-  display: inline-block;
-
-  color: var(--color-neon);
-  font-weight: 600;
-
-  border: 0.1rem var(--color-neon) solid;
-  border-radius: var(--border-radius);
-  background-color: var(--color-neon-trans-light);
-
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
-
-  transition: all 0.3s;
 }
 
 .landing--protect:hover,
 .landing--protect:active {
-  background-color: var(--color-neon-trans);
+  background-color: var(--text-white);
+  color: var(--btn-color);
 }
 
 .steps-heading {
-  padding-bottom: 3rem;
   font-size: 4rem;
+
+  padding-bottom: 2.5rem;
 }
 
 .landing-steps-grid {
@@ -49,7 +35,9 @@
 }
 
 .landing-steps-grid > div > h4 {
-  padding-bottom: 2rem;
+  color: var(--primary);
+
+  padding-bottom: 1.2rem;
 }
 
 /* .landing-steps-grid > div > p {
