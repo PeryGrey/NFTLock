@@ -1,22 +1,22 @@
 :root {
-  /* --background: #081c24; */
-  --background: #171818;
-  --text-white: #f1f1f1;
+  --background: #2d9f99;
+  --text-white: #f0ebf4;
+  /* --text- */
 
-  --color-neon: #e7f9a9;
-  --color-neon-trans: #e8f9a921;
-  --color-neon-trans-light: #e8f9a910;
+  --primary: #17252a;
+  --primary-trans: #17252a31;
+  --primary-trans-light: #17252a19;
+  --primary-dark: #1b827c;
+  --primary-darker: #116b67;
 
-  --color-grey: #929292;
-  --color-grey-trans: #92929221;
+  --secondary: #175b59;
+  --secondary-trans: #2b7a7746;
 
   --color-card-grey: #343434;
   --color-card-grey-light: #494949;
 
-  --color-red: #fe4a49;
-  --color-green: #4ea699;
-  /* --color-blue: #8af3ff; */
-  /* --color-blue: #0091ad; */
+  /* --btn-color: #5f4bb6; */
+  --btn-color: #3943b7;
 
   --border-radius: 0.5rem;
 }
@@ -40,7 +40,7 @@ body {
   font-family: 'Inter', sans-serif;
 
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 3rem;
   color: var(--text-white);
   word-spacing: -0.5rem;
@@ -56,7 +56,6 @@ body {
 
 p {
   word-spacing: 0.2rem;
-  letter-spacing: 0.1rem;
 }
 
 a,
@@ -65,6 +64,7 @@ h2,
 h3,
 h4 {
   font-family: 'Noto Sans Mono', monospace;
+  font-weight: 900;
   word-spacing: -0.5rem;
 }
 
@@ -86,16 +86,53 @@ h4 {
   font-size: 6rem;
   line-height: 1;
 
-  color: var(--dark-green);
+  color: var(--text-white);
 
+  line-height: 1.2;
   padding-bottom: 2.5rem;
 }
 
 .topic-text {
   font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--primary);
+
+  letter-spacing: -0.2rem;
+
+  line-height: 1.2;
   padding-bottom: 2rem;
 }
 
 .emphasise {
-  color: var(--color-neon);
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+
+  display: inline-block;
+
+  padding: 1rem 1.5rem;
+
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+
+  border: 0.1rem var(--btn-color) solid;
+  border-radius: var(--border-radius);
+
+  color: var(--text-white);
+  background-color: var(--btn-color);
+
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  border: 0.1rem var(--text-white) solid;
+
+  color: var(--btn-color);
+  background-color: var(--text-white);
 }

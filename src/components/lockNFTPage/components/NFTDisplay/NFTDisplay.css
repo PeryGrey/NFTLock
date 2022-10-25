@@ -4,19 +4,20 @@
   align-items: center;
 
   border: 0.5rem none;
-  border-radius: var(--border-radius);
-  background-color: var(--color-card-grey);
+  border-radius: var(--primary-dark);
+  color: var(--primary);
+  background-color: var(--primary-trans-light);
 
   transition: all 0.3s;
 }
 
 .card:hover {
-  background-color: var(--color-card-grey-light);
+  background-color: var(--primary-trans);
 }
 
 .image {
-  width: 18rem;
-  height: auto;
+  max-height: 20rem;
+  width: auto;
 }
 
 .NFT-deets {
@@ -28,13 +29,12 @@
 
 .NFT-name {
   font-size: 1.8rem;
-  font-weight: 500;
   padding-bottom: 0.8rem;
 }
 
 .NFT-collection {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   padding-bottom: 0.5rem;
 }
 
@@ -43,12 +43,12 @@
 
   cursor: pointer;
 
-  color: var(--color-card-grey);
-  background-color: var(--color-neon);
-
-  padding: 0.6rem;
+  padding: 0.6rem !important;
 
   border: 0.1rem var(--color-neon) solid;
+  border-radius: 0rem;
+  border-top-left-radius: 0 0 !important;
+  border-top-right-radius: 0 0 !important;
   border-bottom-left-radius: var(--border-radius) var(--border-radius);
   border-bottom-right-radius: var(--border-radius) var(--border-radius);
 
@@ -57,6 +57,8 @@
   align-items: center;
 
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800 !important;
   font-family: 'Inter', sans-serif;
+
+  letter-spacing: 0 !important;
 }
