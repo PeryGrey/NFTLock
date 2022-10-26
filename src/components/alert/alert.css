@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  right: 80px;
+  top: 3px;
+
+  color: var(--primary);
+  border-radius: var(--border-radius);
+
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.connected {
+  background-color: var(--alert-green);
+}
+
+.not-connected {
+  background-color: var(--alert-red);
+}
+
+.alert-icon {
+  height: 3rem;
+  width: auto;
+
+  justify-self: center;
+}
+
+.alert-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+}
+
+.alert-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
