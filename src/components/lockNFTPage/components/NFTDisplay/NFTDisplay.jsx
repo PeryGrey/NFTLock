@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// import image from '../../../../images/unnamed.gif';
-
 import './NFTDisplay.css';
 
 export default function NFTDisplay(props) {

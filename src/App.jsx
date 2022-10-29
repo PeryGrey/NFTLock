@@ -9,6 +9,7 @@ import Header from './components/header/Header';
 
 import LandingPage from './components/landingPage/LandingPage';
 import LockNFTPage from './components/lockNFTPage/LockNFTPage';
+import Alert from '../src/components/alert/Alert';
 
 import './App.css';
 import './general.css';
@@ -18,32 +19,39 @@ function App() {
 
   const [walletAddr, setWalletAddress] = useState('');
 
+  // metamask response for pop-up
+  const [responseStatus, setResponseStatus] = useState();
+
   async function connectWallet() {
     if (window.ethereum) {
       const accounts = await window.ethereum.request({
         method: 'eth_requestAccounts',
       });
-      // if (accounts.length !== 0) {
-      // const wallet = accounts[0];
-      setWalletAddress(accounts[0]);
-      setConnect(true);
-      console.log(walletAddr);
-      // }
+      if (accounts.length !== 0) {
+        setWalletAddress(accounts[0]);
+        setConnect(true);
+        console.log(walletAddr);
+      }
     } else {
       alert('Please install Mask');
     }
   }
-  console.log('start');
 
   return (
     <div className="App">
       <Header connectState={connectState} connectWallet={connectWallet} />
+      <Alert responseStatus={responseStatus} />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
           path="/lock-NFT"
           element={
-            <LockNFTPage connectState={connectState} walletAddr={walletAddr} />
+            <LockNFTPage
+              connectState={connectState}
+              walletAddr={walletAddr}
+              responseStatus={responseStatus}
+              setResponseStatus={setResponseStatus}
+            />
           }
         />
       </Routes>

@@ -26,17 +26,18 @@ export default function LockNFTPage(props) {
     props.connectState &&
       fetch(url, requestOptions)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
+          props.setResponseStatus(response.status);
           return response.json();
         })
 
         .then((data) => {
-          console.log(data['ownedNfts']);
+          // console.log(data['ownedNfts']);
 
           let i = 0;
           for (const element of data['ownedNfts']) {
-            console.log(i);
-            i++;
+            // console.log(i);
+            // i++;
             const elObject = {};
 
             elObject['name'] = element.title;
@@ -52,11 +53,9 @@ export default function LockNFTPage(props) {
             arr.push(elObject);
           }
           setNFTdata(arr);
-
-          console.log(NFTdata);
         })
         .catch((error) => console.log('error', error));
-  }, [props.connectState]);
+  }, [props.connectState, props.responseStatus]);
 
   const NFTcards = NFTdata.map((item) => {
     return (
@@ -70,10 +69,12 @@ export default function LockNFTPage(props) {
     );
   });
 
+  // console.log(props.responseStatus);
+
   return (
     <div className="container NFT-lock-header">
       {/* not connected */}
-      {!props.connectState && <div>Not Connected</div>}
+      {!props.connectState && 'not connected'}
 
       {/* connected */}
       {props.connectState && (
