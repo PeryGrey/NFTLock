@@ -1,3 +1,5 @@
 {
-  "solidity.defaultCompiler": "localNodeModule"
+  "solidity.defaultCompiler": "localNodeModule",
+  "solidity.compileUsingLocalVersion": "c:\\Users\\sgorg\\SaveYourNFTs\\soljson-v0.8.0+commit.c7dfd78e.js",
+  "solidity.compileUsingRemoteVersion": "v0.8.0+commit.c7dfd78e"
 }

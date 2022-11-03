@@ -19,10 +19,12 @@ import "../../utils/introspection/ERC165.sol";
 contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     using Address for address;
     using Strings for uint256;
+    // Lock status
+    bool LOCK = true;
 
     // Token name
     string private _name;
-
+    
     // Token symbol
     string private _symbol;
 
@@ -154,6 +156,7 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     ) public virtual override {
         //solhint-disable-next-line max-line-length
         require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721: caller is not token owner nor approved");
+        require(LOCK == false,"Token is locked! Please unlock it before transferring");
 
         _transfer(from, to, tokenId);
     }
