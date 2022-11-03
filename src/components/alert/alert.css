@@ -4,8 +4,9 @@
 
 .alert {
   position: absolute;
-  right: 80px;
-  top: 3px;
+  right: 476px;
+  top: 85px;
+  /* z-index: 5; */
 
   color: var(--primary);
   border-radius: var(--border-radius);
@@ -16,6 +17,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+
+  transition: all 0.3s;
 }
 
 .connected {

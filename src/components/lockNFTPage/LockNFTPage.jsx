@@ -26,8 +26,6 @@ export default function LockNFTPage(props) {
     props.connectState &&
       fetch(url, requestOptions)
         .then((response) => {
-          // console.log(response);
-          props.setResponseStatus(response.status);
           return response.json();
         })
 
@@ -43,7 +41,8 @@ export default function LockNFTPage(props) {
             elObject['name'] = element.title;
 
             if (element.contractMetadata)
-              elObject['collection'] = element.contractMetadata['name'];
+              elObject['collection'] =
+                'hello' && element.contractMetadata['name'];
 
             elObject['image'] =
               element.metadata.image_url ||
@@ -74,12 +73,18 @@ export default function LockNFTPage(props) {
   return (
     <div className="container NFT-lock-header">
       {/* not connected */}
-      {!props.connectState && 'not connected'}
+      {!props.connectState && (
+        <h2 className="lock-NFT-header">Please connect your wallet!</h2>
+      )}
 
       {/* connected */}
       {props.connectState && (
         <div>
           <h2 className="lock-NFT-header">Your NFTs</h2>
+
+          {NFTdata.length === 0 && (
+            <p className="topic-text">No compatitble NFTs found in wallet!</p>
+          )}
           <div className="NFT-grid">{NFTcards}</div>
         </div>
       )}

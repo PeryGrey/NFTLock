@@ -2,9 +2,14 @@
   padding: 3rem 0;
 }
 
+.not-connected-error {
+  padding-top: 5rem;
+}
+
 .NFT-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr auto;
   /* grid-template-rows: 20rem; */
   gap: 3rem 3rem;
 

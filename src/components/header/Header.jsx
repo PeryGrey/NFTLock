@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 import metamask from '../../images/metamask.svg';
@@ -6,6 +6,27 @@ import metamask from '../../images/metamask.svg';
 import './header.css';
 
 export default function Header(props) {
+  async function connectWallet() {
+    if (props.walletAddr) {
+      props.setConnect(true);
+      props.setResponseStatus(2);
+    } else {
+      console.log('4');
+      props.setResponseStatus(4);
+
+      if (window.ethereum) {
+        const accounts = await window.ethereum.request({
+          method: 'eth_requestAccounts',
+        });
+        if (accounts.length > 0) {
+          props.setWalletAddress(accounts[0]);
+          props.setConnect(true);
+          props.setResponseStatus(2);
+        }
+      }
+    }
+  }
+
   return (
     <nav className="nav-bar">
       <header className="container header">
@@ -23,7 +44,7 @@ export default function Header(props) {
             <li>
               {/* not connected */}
               {!props.connectState && (
-                <button className="metamask-box" onClick={props.connectWallet}>
+                <button className="metamask-box" onClick={connectWallet}>
                   <svg
                     className="metamask-icon metamask-icon-grey"
                     width="18"

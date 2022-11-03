@@ -76,7 +76,7 @@ h4 {
 /**************************/
 
 .container {
-  max-width: 120rem;
+  width: 125rem;
   padding: 0 8rem;
   margin: 0 auto;
 }
@@ -123,7 +123,7 @@ h4 {
   font-weight: 900;
   letter-spacing: -0.1rem;
 
-  border: 0.1rem var(--btn-color) solid;
+  border: none !important;
   border-radius: var(--border-radius);
 
   color: var(--text-white);

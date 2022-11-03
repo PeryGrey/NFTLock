@@ -16,31 +16,49 @@ import './general.css';
 
 function App() {
   const [connectState, setConnect] = useState(false);
+  const [connectClicked, incrementClick] = useState(0);
 
   const [walletAddr, setWalletAddress] = useState('');
 
   // metamask response for pop-up
   const [responseStatus, setResponseStatus] = useState();
 
-  async function connectWallet() {
+  useEffect(async () => {
     if (window.ethereum) {
       const accounts = await window.ethereum.request({
         method: 'eth_requestAccounts',
       });
-      if (accounts.length !== 0) {
+      if (accounts.length > 0) {
         setWalletAddress(accounts[0]);
         setConnect(true);
         console.log(walletAddr);
+        setResponseStatus(2);
       }
     } else {
-      alert('Please install Mask');
+      console.log('4');
+      setResponseStatus(4);
     }
-  }
+  }, []);
+
+  window.ethereum.on('accountsChanged', async () => {
+    window.location.reload(false);
+    setConnect(!connectState);
+  });
 
   return (
     <div className="App">
-      <Header connectState={connectState} connectWallet={connectWallet} />
-      <Alert responseStatus={responseStatus} />
+      <Header
+        connectState={connectState}
+        setConnect={setConnect}
+        walletAddr={walletAddr}
+        setWalletAddress={setWalletAddress}
+        responseStatus={responseStatus}
+        setResponseStatus={setResponseStatus}
+        connectClicked={connectClicked}
+        incrementClick={incrementClick}
+      />
+
+      <Alert responseStatus={responseStatus} connectClicked={connectClicked} />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
@@ -50,7 +68,6 @@ function App() {
               connectState={connectState}
               walletAddr={walletAddr}
               responseStatus={responseStatus}
-              setResponseStatus={setResponseStatus}
             />
           }
         />

@@ -1,12 +1,13 @@
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-items: center;
   align-items: center;
 
   border: 0.5rem none;
   border-radius: var(--primary-dark);
   color: var(--primary);
   background-color: var(--primary-trans-light);
+  height: 100%;
 
   transition: all 0.3s;
 }
@@ -17,7 +18,14 @@
 
 .image {
   max-height: 20rem;
+  min-height: 20rem;
   width: auto;
+}
+
+.not-found {
+  padding: 3rem 3rem;
+  width: 100%;
+  height: auto;
 }
 
 .NFT-deets {
@@ -25,21 +33,38 @@
   padding: 2rem 1rem 1.5rem;
 
   width: 100%;
+  display: block; /* Change it as per your requirement. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .NFT-name {
   font-size: 1.8rem;
   padding-bottom: 0.8rem;
+
+  width: calc(85%);
+  display: block; /* Change it as per your requirement. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .NFT-collection {
   font-size: 1.5rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
+
+  width: calc(85%);
+  display: block; /* Change it as per your requirement. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .NFT-lock-btn {
   width: 100%;
+  align-self: end !important;
 
   cursor: pointer;
 
