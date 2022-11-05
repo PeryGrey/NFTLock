@@ -1,9 +1,51 @@
 .lock-NFT-header {
-  padding: 3rem 0;
+  padding: 3rem 0 3rem;
+  display: flex;
+
+  align-items: center;
 }
 
 .not-connected-error {
   padding-top: 5rem;
+}
+
+.lock-btn-container {
+  padding-left: 3rem;
+}
+
+.locked-btn {
+  cursor: pointer;
+
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0 !important;
+
+  color: var(--secondary) !important;
+  background-color: var(--secondary-trans) !important;
+
+  width: auto;
+
+  border-radius: 0 !important;
+  border: 0.1rem var(--secondary) solid !important ;
+
+  padding: 0.9rem 1.5rem !important;
+}
+
+.locked-btn:first-of-type {
+  border-bottom-left-radius: var(--border-radius) var(--border-radius) !important;
+  border-top-left-radius: var(--border-radius) var(--border-radius) !important;
+}
+
+.locked-btn:last-of-type {
+  border-bottom-right-radius: var(--border-radius) var(--border-radius) !important;
+  border-top-right-radius: var(--border-radius) var(--border-radius) !important;
+}
+
+.asserted-locked-btn {
+  color: var(--text-white) !important;
+  background-color: var(--btn-color) !important;
+
+  border: 0.1rem var(--btn-color) solid !important ;
 }
 
 .NFT-grid {

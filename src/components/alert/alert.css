@@ -1,12 +1,15 @@
-.container {
+.NFT-lock-header > .lock-NFT-header {
   position: relative;
+  /* position: absolute; */
 }
 
 .alert {
   position: absolute;
-  right: 476px;
+  /* position: relative; */
+  right: calc((100% - 125rem) / 2 + 8rem);
   top: 85px;
-  /* z-index: 5; */
+
+  display: block;
 
   color: var(--primary);
   border-radius: var(--border-radius);

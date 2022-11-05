@@ -36,7 +36,7 @@ export default function Header(props) {
         <nav className="main-nav">
           <ul className=" main-nav-list">
             <li>
-              <Link to="/lock-NFT" className="btn main-nav-link nav--protect ">
+              <Link to="/lock-NFT" className="btn main-nav-link nav--protect">
                 Lock NFTs
               </Link>
             </li>

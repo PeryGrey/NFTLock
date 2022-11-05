@@ -41,7 +41,9 @@ export default function NFTDisplay(props) {
             &nbsp;
           </p>
         </div>
-        <button className="btn NFT-lock-btn">Lock NFT</button>
+        <button className="btn NFT-lock-btn">
+          {!props.locked ? 'Lock' : 'Unlock'} NFT
+        </button>
       </div>
     </div>
   );

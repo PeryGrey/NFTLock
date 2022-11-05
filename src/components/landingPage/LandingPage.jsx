@@ -13,14 +13,20 @@ export default function LandingPage() {
           it's that simple!!
         </h2>
 
-        <p className="topic-text">Bye bye scammers 👋</p>
+        <div className="text-emoji-container">
+          <p className="topic-text ">Bye bye scammers</p>
+          <div>👋</div>
+        </div>
 
         <Link to="/lock-NFT" className="btn landing--protect">
           Protect your NFTs!
         </Link>
       </div>
       <div className="landing-steps">
-        <h2 className="steps-heading">Why NFTLock? 🤔</h2>
+        <div className="text-emoji-container">
+          <h2 className="steps-heading">Why NFTLock?</h2>
+          <div>🤔</div>
+        </div>
         <div className="landing-steps-grid">
           <div>
             <h4>1</h4>
