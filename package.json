@@ -9,13 +9,16 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@truffle/hdwallet-provider": "^2.1.1",
     "alchemy-sdk": "^2.2.0",
     "babel": "^6.23.0",
+    "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
+    "truffle-hdwallet-provider": "^1.0.17",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,6 +46,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3"
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "dotenv": "4.0.0",
+    "truffle-hdwallet-provider": "0.0.5",
+    "truffle-plugin-verify": "^0.5.32"
   }
 }

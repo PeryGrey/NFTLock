@@ -2,14 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 import detectEthereumProvider from '@metamask/detect-provider';
-import { ethers } from 'ethers';
 
 import Header from './components/header/Header';
 // import Footer from './components/footer/Footer';
 
 import LandingPage from './components/landingPage/LandingPage';
 import LockNFTPage from './components/lockNFTPage/LockNFTPage';
-import Alert from '../src/components/alert/Alert';
+import AlertConnect from './components/alert/AlertConnect';
 
 import './App.css';
 import './general.css';
@@ -58,7 +57,11 @@ function App() {
         incrementClick={incrementClick}
       />
 
-      <Alert responseStatus={responseStatus} connectClicked={connectClicked} />
+      <AlertConnect
+        type={'connect'}
+        responseStatus={responseStatus}
+        connectClicked={connectClicked}
+      />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route

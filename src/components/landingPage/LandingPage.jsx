@@ -28,15 +28,15 @@ export default function LandingPage() {
           <div>🤔</div>
         </div>
         <div className="landing-steps-grid">
-          <div>
+          {/* <div>
             <h4>1</h4>
             <p className="topic-text">
               You
               <span className="emphasise"> still own your NFT</span>.
             </p>
-          </div>
+          </div> */}
           <div>
-            <h4>2</h4>
+            <h4>1</h4>
             <p className="topic-text">
               Just
               <span className="emphasise"> pay gas fees to protect </span>
@@ -44,7 +44,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div>
-            <h4>3</h4>
+            <h4>2</h4>
             <p className="topic-text">
               <span className="emphasise">Pay gas fees to unlock </span> your
               NFT to move it around.

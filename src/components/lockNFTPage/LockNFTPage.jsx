@@ -9,7 +9,7 @@ import './lockNFTPage.css';
 
 export default function LockNFTPage(props) {
   const baseURL =
-    'https://eth-mainnet.g.alchemy.com/v2/hal332vSMD33evQX0JZznrZU4iEdupd8';
+    'https://eth-goerli.g.alchemy.com/v2/fESHdrl7cjLI8lYkHb0kkcZKzEqM_P04';
 
   const url = `${baseURL}/getNFTs/?owner=${props.walletAddr}`;
 
@@ -31,15 +31,17 @@ export default function LockNFTPage(props) {
         })
 
         .then((data) => {
-          // console.log(data['ownedNfts']);
+          console.log(data['ownedNfts']);
 
           let i = 0;
           for (const element of data['ownedNfts']) {
             if (element['contractMetadata']['tokenType'] !== 'ERC721') continue;
 
-            // console.log(i);
-            // i++;
             const elObject = {};
+
+            elObject['contractAddress'] = element.contract['address'];
+
+            elObject['id'] = parseInt(element.id['tokenId'], 16);
 
             elObject['name'] = element.title;
 
@@ -53,11 +55,15 @@ export default function LockNFTPage(props) {
               element.media[0]['gateway'] ||
               element.metadata.image;
 
-            if (Number(element.id['tokenId']) % 2 === 1) arrLock.push(elObject);
-            else arrUnlock.push(elObject);
+            // if (Number(element.id['tokenId']) % 2 === 1) arrLock.push(elObject);
+            // else arrUnlock.push(elObject);
+
+            arrUnlock.push(elObject);
           }
           // console.log(arrLock, arrUnlock);
-          const arr = [arrUnlock, arrLock];
+          // const arr = [arrUnlock, arrLock];
+          console.log(arrUnlock);
+          const arr = [arrUnlock];
           setNFTdata(arr);
         })
         .catch((error) => console.log('error', error));
@@ -85,7 +91,8 @@ export default function LockNFTPage(props) {
           name={item.name}
           collection={item.collection}
           image={item.image}
-          locked={lockTab}
+          contractAddress={item.contractAddress}
+          id={item.id}
         />
       </div>
     );
@@ -103,7 +110,7 @@ export default function LockNFTPage(props) {
         <div>
           <div className="lock-NFT-header">
             <h2>Your NFTs</h2>
-            <div className="lock-btn-container">
+            {/* <div className="lock-btn-container">
               <button
                 className="btn locked-btn asserted-locked-btn"
                 onClick={() => {
@@ -120,7 +127,7 @@ export default function LockNFTPage(props) {
               >
                 Locked NFTs
               </button>
-            </div>
+            </div> */}
           </div>
 
           {NFTdata[lockTab ? 1 : 0].length === 0 && (
