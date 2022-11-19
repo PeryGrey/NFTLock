@@ -32,17 +32,18 @@ function App() {
         setConnect(true);
         console.log(walletAddr);
         setResponseStatus(2);
+      } else if (accounts.length == 0) {
+        console.log('4');
+        setResponseStatus(4);
       }
-    } else {
-      console.log('4');
-      setResponseStatus(4);
     }
   }, []);
 
-  window.ethereum.on('accountsChanged', async () => {
-    window.location.reload(false);
-    setConnect(!connectState);
-  });
+  if (window.ethereum)
+    window.ethereum.on('accountsChanged', async () => {
+      window.location.reload(false);
+      setConnect(!connectState);
+    });
 
   return (
     <div className="App">

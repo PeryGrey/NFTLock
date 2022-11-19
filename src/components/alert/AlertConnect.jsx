@@ -64,14 +64,17 @@ import './alert.css';
 
 export default function MessageConnected(props) {
   const [show, setShow] = useState(true);
+  const [clicked, addClick] = useState(0);
 
   useEffect(() => {
     console.log(props.connectClicked);
-
+    // addClick(clicked + 1);
     if (props.responseStatus) {
+      setShow(true);
       const timeId = setTimeout(() => {
         // After 3 seconds set the show value to false
         console.log(props.responseStatus);
+        console.log(show);
         setShow(false);
       }, 3000);
 
@@ -79,7 +82,7 @@ export default function MessageConnected(props) {
         clearTimeout(timeId);
       };
     }
-  }, [props.responseStatus]);
+  }, [props.responseStatus, clicked]);
 
   // If show is true this will be returned
   if (!show) {

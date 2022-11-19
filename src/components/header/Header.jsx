@@ -23,6 +23,7 @@ export default function Header(props) {
           props.setConnect(true);
           props.setResponseStatus(2);
         }
+      } else {
       }
     }
   }
